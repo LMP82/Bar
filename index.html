@@ -3,121 +3,400 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RESTAURANTE DEMO</title>
+
+<title>Mesón Los Arcos | Tapas y Comida Casera en Almuñécar</title>
+
+<meta name="description" content="Mesón Los Arcos. Tapas, desayunos y comida casera en Almuñécar. Ambiente familiar y cocina tradicional.">
+
+<meta name="keywords" content="bar Almuñécar, tapas Almuñécar, comida casera Granada, desayunos Almuñécar, mesón Los Arcos">
+
+<!-- ICONOS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
-body {
-    margin: 0;
-    font-family: Arial;
-    background: #111;
-    color: white;
+
+/* GENERAL */
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#111;
+    color:white;
 }
 
-nav {
-    background: black;
-    padding: 15px;
-    text-align: center;
+/* MENU */
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#000;
+    padding:15px;
+    text-align:center;
+    border-bottom:2px solid #d4af37;
 }
 
-nav a {
-    color: white;
-    margin: 10px;
-    text-decoration: none;
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+    transition:0.3s;
 }
 
-header {
-    background: url('images/restaurante.jpg') center/cover;
-    padding: 120px 20px;
-    text-align: center;
+nav a:hover{
+    color:#d4af37;
 }
 
-h1 { font-size: 40px; }
+/* HEADER */
+header{
+    height:90vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
+    url('images/portada.jpg') center/cover;
 
-.button {
-    background: #e63946;
-    padding: 12px 20px;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    margin: 5px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
 }
 
-section {
-    padding: 40px;
-    max-width: 900px;
-    margin: auto;
+header h1{
+    font-size:60px;
+    margin-bottom:15px;
 }
 
-.card {
-    background: #222;
-    padding: 20px;
-    margin: 20px 0;
+header p{
+    font-size:24px;
+    max-width:700px;
+    line-height:1.6;
 }
 
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-    gap: 10px;
+/* BOTONES */
+.button{
+    display:inline-block;
+    padding:14px 24px;
+    margin:12px 8px;
+    border-radius:6px;
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    transition:0.3s;
 }
 
-.gallery img {
-    width: 100%;
+.whatsapp{
+    background:#25D366;
 }
 
-/* WhatsApp */
-.whatsapp {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25D366;
-    padding: 10px;
-    border-radius: 50%;
+.whatsapp:hover{
+    background:#1ebe5d;
 }
+
+.call{
+    background:#d4af37;
+    color:black;
+}
+
+.call:hover{
+    background:#f1c94a;
+}
+
+.button i{
+    margin-right:8px;
+}
+
+/* SECCIONES */
+section{
+    max-width:1200px;
+    margin:auto;
+    padding:70px 20px;
+}
+
+.card{
+    background:#1b1b1b;
+    border-radius:12px;
+    padding:35px;
+    margin:20px 0;
+    box-shadow:0 4px 12px rgba(0,0,0,0.4);
+}
+
+h2{
+    color:#d4af37;
+    margin-bottom:20px;
+    font-size:34px;
+}
+
+/* TEXTO */
+.card p{
+    line-height:1.8;
+    font-size:18px;
+}
+
+/* ESPECIALIDADES */
+.servicios{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.servicio{
+    background:#222;
+    padding:25px;
+    border-radius:10px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.servicio:hover{
+    transform:translateY(-5px);
+}
+
+.servicio i{
+    font-size:42px;
+    color:#d4af37;
+    margin-bottom:15px;
+}
+
+/* GALERIA */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.03);
+}
+
+/* HORARIO */
+.horario{
+    line-height:2;
+    font-size:18px;
+}
+
+/* REDES */
+.social{
+    text-align:center;
+    margin-top:25px;
+}
+
+.social a{
+    color:#d4af37;
+    font-size:28px;
+    margin:0 12px;
+    transition:0.3s;
+}
+
+.social a:hover{
+    color:white;
+}
+
+/* WHATSAPP FLOTANTE */
+.whatsapp-float{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:12px 18px;
+    border-radius:50px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    text-decoration:none;
+    font-weight:bold;
+    box-shadow:0 4px 10px rgba(0,0,0,0.4);
+    z-index:999;
+}
+
+.whatsapp-float img{
+    width:28px;
+}
+
+/* FOOTER */
+footer{
+    background:#000;
+    text-align:center;
+    padding:30px 20px;
+    border-top:2px solid #d4af37;
+}
+
 </style>
 </head>
 
 <body>
 
+<!-- MENU -->
 <nav>
 <a href="#inicio">Inicio</a>
-<a href="#carta">Carta</a>
+<a href="#nosotros">Nosotros</a>
+<a href="#especialidades">Especialidades</a>
 <a href="#galeria">Galería</a>
+<a href="#horario">Horario</a>
 <a href="#contacto">Contacto</a>
 </nav>
 
+<!-- HEADER -->
 <header id="inicio">
-<h1>Nombre del Restaurante</h1>
-<p>Comida casera · Calidad · Buen ambiente</p>
-<a class="button" href="tel:600000000">Reservar mesa</a>
+
+<h1>MESÓN LOS ARCOS</h1>
+
+<p>
+Comida casera, tapas y ambiente familiar en Almuñécar.
+</p>
+
+<div>
+
+<a class="button whatsapp" href="#">
+<i class="fab fa-whatsapp"></i> WhatsApp
+</a>
+
+<a class="button call" href="#">
+<i class="fas fa-phone"></i> Llamar
+</a>
+
+</div>
+
 </header>
 
-<section id="carta">
+<!-- NOSOTROS -->
+<section id="nosotros">
+
 <div class="card">
-<h2>Nuestra carta</h2>
-<p>Entrantes, carnes, pescados y postres caseros.</p>
+
+<h2>Sobre Nosotros</h2>
+
+<p>
+En Mesón Los Arcos ofrecemos cocina tradicional, tapas y desayunos en un ambiente cercano y familiar.
+Trabajamos con productos de calidad y atención personalizada para que cada visita sea una buena experiencia.
+</p>
+
 </div>
+
 </section>
 
+<!-- ESPECIALIDADES -->
+<section id="especialidades">
+
+<h2>Nuestras Especialidades</h2>
+
+<div class="servicios">
+
+<div class="servicio">
+<i class="fas fa-utensils"></i>
+<h3>Tapas Caseras</h3>
+<p>Tapas tradicionales elaboradas al momento.</p>
+</div>
+
+<div class="servicio">
+<i class="fas fa-mug-hot"></i>
+<h3>Desayunos</h3>
+<p>Café, tostadas y desayunos completos.</p>
+</div>
+
+<div class="servicio">
+<i class="fas fa-beer-mug-empty"></i>
+<h3>Bebidas</h3>
+<p>Cervezas frías, refrescos y buen ambiente.</p>
+</div>
+
+<div class="servicio">
+<i class="fas fa-burger"></i>
+<h3>Comida Casera</h3>
+<p>Hamburguesas, raciones y platos combinados.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- GALERIA -->
 <section id="galeria">
+
 <h2>Galería</h2>
+
 <div class="gallery">
-<img src="images/comida1.jpg">
-<img src="images/comida2.jpg">
-<img src="images/comida3.jpg">
+
+<img src="images/foto1.jpg" alt="Foto 1">
+<img src="images/foto2.jpg" alt="Foto 2">
+<img src="images/foto3.jpg" alt="Foto 3">
+<img src="images/foto4.jpg" alt="Foto 4">
+<img src="images/foto5.jpg" alt="Foto 5">
+<img src="images/foto6.jpg" alt="Foto 6">
+<img src="images/foto7.jpg" alt="Foto 7">
+<img src="images/foto8.jpg" alt="Foto 8">
+
 </div>
+
 </section>
 
-<section id="contacto">
+<!-- HORARIO -->
+<section id="horario">
+
 <div class="card">
-<h2>Contacto</h2>
-<p>Teléfono: 600000000</p>
-<p>Ubicación: Ciudad</p>
+
+<h2>Horario</h2>
+
+<div class="horario">
+
+<p>Lunes - Viernes: 7:00 - 23:00</p>
+<p>Sábados: 8:00 - 00:00</p>
+<p>Domingos: 8:00 - 18:00</p>
+
 </div>
+
+</div>
+
 </section>
 
-<a href="https://wa.me/34600000000" class="whatsapp">
-<img src="images/whatsapp.png" width="30">
+<!-- CONTACTO -->
+<section id="contacto">
+
+<div class="card">
+
+<h2>Contacto</h2>
+
+<p><strong>Teléfono:</strong> 600000000</p>
+
+<p><strong>Ubicación:</strong> Almuñécar, Granada</p>
+
+<p><strong>Email:</strong> ejemplo@email.com</p>
+
+<div class="social">
+
+<a href="#"><i class="fab fa-instagram"></i></a>
+
+<a href="#"><i class="fab fa-facebook"></i></a>
+
+<a href="#"><i class="fab fa-google"></i></a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- WHATSAPP -->
+<a href="#" class="whatsapp-float">
+
+<span>Reservas</span>
+
+<img src="images/whatsapp.png" alt="WhatsApp">
+
 </a>
+
+<!-- FOOTER -->
+<footer>
+
+<p>© 2026 MESÓN LOS ARCOS</p>
+
+</footer>
 
 </body>
 </html>
